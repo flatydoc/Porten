@@ -1,3 +1,5 @@
+var button = document.querySelector(".header__burger");
+
 function testWebP(callback) {
   var webP = new Image();
   webP.onload = webP.onerror = function () {
@@ -13,4 +15,9 @@ testWebP(function (support) {
   } else {
     document.querySelector("body").classList.add("no-webp");
   }
+});
+
+button.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  button.classList.toggle("header__burger-close");
 });
