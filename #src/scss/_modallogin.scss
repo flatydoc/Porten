@@ -1,0 +1,173 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 120px;
+  left: 50%;
+
+  color: black;
+
+  background-color: #ecf1f2;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+
+  &__user {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+
+    width: 320px;
+    height: 360px;
+    margin-left: -160px;
+    padding: 20px 10px;
+
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    & h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    &-show {
+      display: flex;
+      animation: bounce 0.6s;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 240px;
+
+    & input {
+      width: 300px;
+      height: 50px;
+
+      padding: 0 40px 0 15px;
+
+      border: 2px solid rgb(194, 194, 194);
+      border-radius: 3px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: 95%;
+      background-size: 15px;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+
+    &-login {
+      background-image: url(/img/icons/user_modal.svg);
+    }
+
+    &-password {
+      background-image: url(/img/icons/lock.svg);
+    }
+
+    &-help {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 100%;
+      height: 30px;
+    }
+
+    &-remember {
+      position: relative;
+      display: flex;
+
+      padding-left: 25px;
+
+      line-height: 17px;
+
+      cursor: pointer;
+
+      &:hover {
+        color: rgb(232, 170, 49);
+      }
+
+      & input[type="checkbox"] + .checkbox-indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 17px;
+        height: 17px;
+
+        border: 2px solid black;
+      }
+
+      & input[type="checkbox"]:checked + .checkbox-indicator::before,
+      & input[type="checkbox"]:checked + .checkbox-indicator::after {
+        content: "";
+
+        position: absolute;
+        top: 5.5px;
+        left: -1px;
+
+        width: 15px;
+        height: 2px;
+
+        background-color: black;
+      }
+
+      & input[type="checkbox"]:checked + .checkbox-indicator::before {
+        transform: rotate(45deg);
+      }
+
+      & input[type="checkbox"]:checked + .checkbox-indicator::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &-restore {
+      text-decoration: underline;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+
+    width: 20px;
+    height: 20px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0;
+
+      width: 20px;
+      height: 2px;
+      background-color: rgb(232, 170, 49);
+    }
+
+    &:before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &-error {
+    animation-name: shake;
+    animation-duration: 0.6s;
+  }
+}

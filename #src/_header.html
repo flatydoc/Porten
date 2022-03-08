@@ -14,9 +14,30 @@
         <a class="header__navigation-link" href="#">Контакты</a>
       </li>
     </ul>
-    <button type="button" class="header__burger">
+    <button type="button" class="header__burger-button">
       <span></span>
     </button>
+    <aside class="sidebar">
+      <ul class="sidebar__list">
+        <li class="sidebar__list-item">
+          <a class="sidebar__list-link popup__button" href="#"
+            >Каталог товаров</a
+          >
+        </li>
+        <li class="sidebar__list-item">
+          <a class="sidebar__list-link" href="#">Контакты</a>
+        </li>
+        <li class="sidebar__list-item">
+          <a class="sidebar__list-link" href="#">Новости</a>
+        </li>
+        <li class="sidebar__list-item">
+          <a class="sidebar__list-link" href="#">Оплата и доставка</a>
+        </li>
+        <li class="sidebar__list-item">
+          <a class="sidebar__list-link" href="#">О нас</a>
+        </li>
+      </ul>
+    </aside>
     <a class="header__navigation-link header__navigation-user" href="#"
       >Личный кабинет</a
     >
@@ -26,7 +47,20 @@
     <a class="header__logo" href="#">
       <img src="/img/icons/logo.svg" alt="Логотип Златоустовские ножи" />
     </a>
-    <input class="header__search" type="text" placeholder="Поиск" />
+    <form
+      class="header__search"
+      action="https://echo.htmlacademy.ru"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <input
+        name="search"
+        class="header__search-input"
+        type="text"
+        placeholder="Поиск"
+      />
+      <button class="header__search-button" type="submit">Найти</button>
+    </form>
   </div>
   <div class="header__navigation header__catalog">
     <ul class="header__navigation-list header__catalog-list">
@@ -57,4 +91,42 @@
       </li>
     </ul>
   </div>
+  <section class="modal__user modal">
+    <h2>Личный кабинет</h2>
+    <p>Введите ваш логин и пароль</p>
+    <form
+      class="modal__form"
+      method="POST"
+      action="https://echo.htmlacademy.ru"
+    >
+      <label class="visually-hidden" for="user-login">Логин</label>
+      <input
+        class="modal__form-login"
+        id="user-login"
+        name="login"
+        type="text"
+        placeholder="email"
+      />
+      <label class="visually-hidden" for="user-password">Пароль</label>
+      <input
+        class="modal__form-password"
+        id="user-password"
+        name="password"
+        type="password"
+        placeholder="********"
+      />
+      <div class="modal__form-help">
+        <label class="modal__form-remember">
+          <input type="checkbox" name="remember" class="visually-hidden" />
+          <span class="checkbox-indicator"></span>
+          Запомните меня
+        </label>
+        <a class="modal__form-restore" href="#">Я забыл пароль!</a>
+      </div>
+      <button class="button" type="submit">Войти</button>
+    </form>
+    <button class="modal-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+  </section>
 </header>

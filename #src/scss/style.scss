@@ -13,6 +13,9 @@
 
 @import "_fonts";
 @import "_header";
+@import "_aside";
+@import "_keyframes";
+@import "_modallogin";
 
 .visually-hidden {
   position: absolute;
@@ -41,6 +44,7 @@ body {
 
   color: white;
   font-weight: 600;
+  font-size: 18px;
   letter-spacing: 1px;
 
   background-color: rgb(232, 170, 49);
@@ -54,29 +58,5 @@ body {
 
   &:active {
     transform: scale(95%);
-  }
-}
-
-.header__search {
-  position: relative;
-
-  height: 40px;
-  width: 350px;
-
-  padding-left: 40px;
-  padding-right: 10px;
-
-  border: 1px solid rgb(194, 194, 194);
-  border-radius: 3px;
-  background-color: transparent;
-  background-image: url(../img/icons/search.svg);
-  background-repeat: no-repeat;
-  background-position: 15px;
-  background-size: 15px;
-
-  &:hover,
-  &:focus {
-    box-shadow: (0px 5px 5px rgba(0, 0, 0, 0.25));
-    transform: scale(101%);
   }
 }
