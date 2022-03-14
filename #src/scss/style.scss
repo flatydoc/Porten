@@ -15,7 +15,7 @@
 @import "_header";
 @import "_aside";
 @import "_keyframes";
-@import "_modallogin";
+@import "_modal";
 
 .visually-hidden {
   position: absolute;
@@ -38,8 +38,6 @@ body {
 }
 
 .button {
-  width: 228px;
-  height: 50px;
   box-sizing: border-box;
 
   color: white;

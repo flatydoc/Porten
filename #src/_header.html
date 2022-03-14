@@ -20,9 +20,7 @@
     <aside class="sidebar">
       <ul class="sidebar__list">
         <li class="sidebar__list-item">
-          <a class="sidebar__list-link popup__button" href="#"
-            >Каталог товаров</a
-          >
+          <a class="sidebar__list-link" href="#">Каталог товаров</a>
         </li>
         <li class="sidebar__list-item">
           <a class="sidebar__list-link" href="#">Контакты</a>
@@ -42,10 +40,11 @@
       >Личный кабинет</a
     >
   </nav>
-  <div class="header__body">
+  <div class="header__actions">
     <h1 class="visually-hidden">Златоустовские ножи</h1>
     <a class="header__logo" href="#">
-      <img src="/img/icons/logo.svg" alt="Логотип Златоустовские ножи" />
+      <!-- prettier-ignore -->
+      <img class="header__logo-img" src="/img/icons/logo.svg" alt="Логотип Златоустовские ножи"/>
     </a>
     <form
       class="header__search"
@@ -59,7 +58,7 @@
         type="text"
         placeholder="Поиск"
       />
-      <button class="header__search-button" type="submit">Найти</button>
+      <button class="header__search-button button" type="submit">Найти</button>
     </form>
   </div>
   <div class="header__navigation header__catalog">
@@ -91,6 +90,28 @@
       </li>
     </ul>
   </div>
+  <section class="header__body">
+    <div class="header__adv">
+      <ul class="header__adv-list">
+        <li class="header__adv-item">
+          <img src="img/icons/garant.svg" />
+          <span>Гарантия 100% возврата<br />денежных средств</span>
+        </li>
+        <li class="header__adv-item">
+          <img src="img/icons/delivery.svg" />
+          <span>Доставка по России, <br />Казахстану и Белоруссии</span>
+        </li>
+        <li class="header__adv-item">
+          <img src="img/icons/order.svg" />
+          <span>Возможность оформление<br />заказа без регистрации.</span>
+        </li>
+        <li class="header__adv-item">
+          <img src="img/icons/sale.svg" />
+          <span>Скидки постоянным <br />покупателям.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
   <section class="modal__user modal">
     <h2>Личный кабинет</h2>
     <p>Введите ваш логин и пароль</p>
@@ -123,7 +144,7 @@
         </label>
         <a class="modal__form-restore" href="#">Я забыл пароль!</a>
       </div>
-      <button class="button" type="submit">Войти</button>
+      <button class="modal-button button" type="submit">Войти</button>
     </form>
     <button class="modal-close" type="button">
       <span class="visually-hidden">Закрыть</span>
