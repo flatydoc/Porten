@@ -1,5 +1,10 @@
 @import "_normalize";
 
+@import "_header";
+@import "_aside";
+@import "_keyframes";
+@import "_modal";
+
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
     font-family: $font_name;
@@ -12,10 +17,6 @@
 }
 
 @import "_fonts";
-@import "_header";
-@import "_aside";
-@import "_keyframes";
-@import "_modal";
 
 .visually-hidden {
   position: absolute;
@@ -37,24 +38,27 @@ body {
   font-size: 16px;
 }
 
-.button {
-  box-sizing: border-box;
+a {
+  color: white;
+}
 
+.button {
   color: white;
   font-weight: 600;
   font-size: 18px;
   letter-spacing: 1px;
 
   background-color: rgb(232, 170, 49);
-  border-radius: 3px;
-  box-shadow: 0px 5px 20px rgba(232, 170, 49, 0.43);
+  box-shadow: 0px 5px 20px rgba(232, 170, 49, 0.4);
 
   &:hover,
   &:focus {
-    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 7px 25px rgba(232, 170, 49, 0.5);
+    transform: scale(101%);
   }
 
   &:active {
-    transform: scale(95%);
+    transform: scale(99%);
+    box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
   }
 }

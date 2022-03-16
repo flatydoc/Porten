@@ -34,7 +34,6 @@ body {
   height: 100%;
   width: 100%;
   line-height: 1;
-  font-size: 15px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -62,11 +61,6 @@ button::-moz-focus-inner {
 
 a,
 a:visited {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
   text-decoration: none;
 }
 

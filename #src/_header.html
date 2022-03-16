@@ -2,42 +2,23 @@
   <nav class="header__navigation">
     <ul class="header__navigation-list">
       <li class="header__navigation-item">
-        <a class="header__navigation-link" href="#">О нас</a>
+        <a class="header__navigation-link" href="#">About</a>
       </li>
       <li class="header__navigation-item">
-        <a class="header__navigation-link" href="#">Оплата и доставка</a>
+        <a class="header__navigation-link" href="#">Payment and Delivery</a>
       </li>
       <li class="header__navigation-item">
-        <a class="header__navigation-link" href="#">Новости</a>
+        <a class="header__navigation-link" href="#">News</a>
       </li>
       <li class="header__navigation-item">
-        <a class="header__navigation-link" href="#">Контакты</a>
+        <a class="header__navigation-link" href="#">Contacts</a>
       </li>
     </ul>
-    <button type="button" class="header__burger-button">
+    <button class="header__burger-button" type="button">
       <span></span>
     </button>
-    <aside class="sidebar">
-      <ul class="sidebar__list">
-        <li class="sidebar__list-item">
-          <a class="sidebar__list-link" href="#">Каталог товаров</a>
-        </li>
-        <li class="sidebar__list-item">
-          <a class="sidebar__list-link" href="#">Контакты</a>
-        </li>
-        <li class="sidebar__list-item">
-          <a class="sidebar__list-link" href="#">Новости</a>
-        </li>
-        <li class="sidebar__list-item">
-          <a class="sidebar__list-link" href="#">Оплата и доставка</a>
-        </li>
-        <li class="sidebar__list-item">
-          <a class="sidebar__list-link" href="#">О нас</a>
-        </li>
-      </ul>
-    </aside>
     <a class="header__navigation-link header__navigation-user" href="#"
-      >Личный кабинет</a
+      >Sign in</a
     >
   </nav>
   <div class="header__actions">
@@ -53,12 +34,12 @@
       enctype="multipart/form-data"
     >
       <input
-        name="search"
         class="header__search-input"
+        name="search"
         type="text"
-        placeholder="Поиск"
+        placeholder="Search"
       />
-      <button class="header__search-button button" type="submit">Найти</button>
+      <button class="header__search-button button" type="submit">Find</button>
     </form>
   </div>
   <div class="header__navigation header__catalog">
@@ -90,7 +71,41 @@
       </li>
     </ul>
   </div>
-  <section class="header__body">
+  <aside class="sidebar">
+    <ul class="sidebar__list">
+      <li class="sidebar__list-item">
+        <a class="sidebar__list-link" href="#">Каталог товаров</a>
+      </li>
+      <li class="sidebar__list-item">
+        <a class="sidebar__list-link" href="#">Контакты</a>
+      </li>
+      <li class="sidebar__list-item">
+        <a class="sidebar__list-link" href="#">Новости</a>
+      </li>
+      <li class="sidebar__list-item">
+        <a class="sidebar__list-link" href="#">Оплата и доставка</a>
+      </li>
+      <li class="sidebar__list-item">
+        <a class="sidebar__list-link" href="#">О нас</a>
+      </li>
+    </ul>
+  </aside>
+  <div class="header__body">
+    <section class="header__slider slide-1">
+      <h2 class="header__slider-heading">
+        Интернет магазин сертифицированных<br />златоустовских ножей
+      </h2>
+      <p class="header__slider-caption">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
+        sit nesciunt ex commodi maiores consectetur rerum soluta temporibus
+        reprehenderit corporis dicta qui ducimus suscipit aspernatur earum
+        molestiae voluptatem, laborum fugiat!
+      </p>
+      <button class="header__slider-button button" type="button">
+        Подробнее
+      </button>
+      <img class="header__slider-img" src="/img/slider-item1.png" alt="Нож" />
+    </section>
     <div class="header__adv">
       <ul class="header__adv-list">
         <li class="header__adv-item">
@@ -111,10 +126,10 @@
         </li>
       </ul>
     </div>
-  </section>
+  </div>
   <section class="modal__user modal">
-    <h2>Личный кабинет</h2>
-    <p>Введите ваш логин и пароль</p>
+    <h2>Authorization</h2>
+    <p>Sign in to continue</p>
     <form
       class="modal__form"
       method="POST"
@@ -126,7 +141,7 @@
         id="user-login"
         name="login"
         type="text"
-        placeholder="email"
+        placeholder="Email, Phone number"
       />
       <label class="visually-hidden" for="user-password">Пароль</label>
       <input
@@ -134,20 +149,28 @@
         id="user-password"
         name="password"
         type="password"
-        placeholder="********"
+        placeholder="Password"
       />
       <div class="modal__form-help">
         <label class="modal__form-remember">
           <input type="checkbox" name="remember" class="visually-hidden" />
           <span class="checkbox-indicator"></span>
-          Запомните меня
+          Remember me
         </label>
-        <a class="modal__form-restore" href="#">Я забыл пароль!</a>
+        <a class="modal__form-restore" href="#">Forget your password?</a>
       </div>
-      <button class="modal-button button" type="submit">Войти</button>
+      <button class="modal__button button" type="submit">Sign in</button>
+      <span>Or</span>
+      <button class="modal__button modal__button-google" type="submit">
+        Sign in with Google
+      </button>
+      <button class="modal__button modal__button-facebook" type="submit">
+        Continue with Facebook
+      </button>
     </form>
     <button class="modal-close" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
+    <p>Don't have an account?<a class="modal-link" href="#">Sign up</a></p>
   </section>
 </header>
