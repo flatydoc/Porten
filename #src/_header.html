@@ -2,7 +2,7 @@
   <nav class="header__navigation">
     <ul class="header__navigation-list">
       <li class="header__navigation-item">
-        <a class="header__navigation-link" href="#">About</a>
+        <a class="header__navigation-link" href="#">About us</a>
       </li>
       <li class="header__navigation-item">
         <a class="header__navigation-link" href="#">Payment and Delivery</a>
@@ -13,13 +13,21 @@
       <li class="header__navigation-item">
         <a class="header__navigation-link" href="#">Contacts</a>
       </li>
+      <li class="header__navigation-item">
+        <a class="header__navigation-link header__navigation-user"> Sign in </a>
+      </li>
     </ul>
-    <button class="header__burger-button" type="button">
-      <span></span>
-    </button>
-    <a class="header__navigation-link header__navigation-user" href="#"
-      >Sign in</a
-    >
+    <div class="header__navigation-icons">
+      <button class="burger__button header__navigation-link" type="button">
+        <span></span>
+      </button>
+      <a class="contacts__button header__navigation-link" href="#"></a>
+      <a class="cart__button header__navigation-link" href="#"></a>
+      <a
+        class="user__button header__navigation-link header__navigation-user"
+        type="button"
+      ></a>
+    </div>
   </nav>
   <div class="header__actions">
     <h1 class="visually-hidden">Златоустовские ножи</h1>
@@ -42,32 +50,22 @@
       <button class="header__search-button button" type="submit">Find</button>
     </form>
   </div>
-  <div class="header__navigation header__catalog">
-    <ul class="header__navigation-list header__catalog-list">
-      <li class="header__navigation-item header__catalog-item">
-        <a class="header__navigation-link header__catalog-link" href="#"
-          >Каталог ножей</a
-        >
+  <div class="header__catalog">
+    <ul class="header__catalog-list">
+      <li class="header__catalog-item">
+        <a class="header__catalog-link" href="#">Knife catalog</a>
       </li>
-      <li class="header__navigation-item header__catalog-item">
-        <a class="header__navigation-link header__catalog-link" href="#"
-          >Клинковое оружие</a
-        >
+      <li class="header__catalog-item">
+        <a class="header__catalog-link" href="#">Blade weapon</a>
       </li>
-      <li class="header__navigation-item header__catalog-item">
-        <a class="header__navigation-link header__catalog-link" href="#"
-          >Сувенирные изделия</a
-        >
+      <li class="header__catalog-item">
+        <a class="header__catalog-link" href="#">Gift knives</a>
       </li>
-      <li class="header__navigation-item header__catalog-item">
-        <a class="header__navigation-link header__catalog-link" href="#"
-          >Фонари ARMYTEK</a
-        >
+      <li class="header__catalog-item">
+        <a class="header__catalog-link" href="#">Axes</a>
       </li>
-      <li class="header__navigation-item header__catalog-item">
-        <a class="header__navigation-link header__catalog-link" href="#"
-          >Сопуствующие товары</a
-        >
+      <li class="header__catalog-item">
+        <a class="header__catalog-link" href="#">Related products</a>
       </li>
     </ul>
   </div>
@@ -91,21 +89,58 @@
     </ul>
   </aside>
   <div class="header__body">
-    <section class="header__slider slide-1">
-      <h2 class="header__slider-heading">
-        Интернет магазин сертифицированных<br />златоустовских ножей
-      </h2>
-      <p class="header__slider-caption">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
-        sit nesciunt ex commodi maiores consectetur rerum soluta temporibus
-        reprehenderit corporis dicta qui ducimus suscipit aspernatur earum
-        molestiae voluptatem, laborum fugiat!
-      </p>
-      <button class="header__slider-button button" type="button">
-        Подробнее
-      </button>
-      <img class="header__slider-img" src="/img/slider-item1.png" alt="Нож" />
+    <section class="slider">
+      <div class="slide slide__1">
+        <h2 class="slide-heading">slide 1</h2>
+        <p class="slide-caption">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
+          sit nesciunt ex commodi maiores consectetur rerum soluta temporibus
+          reprehenderit corporis dicta qui ducimus suscipit aspernatur earum
+          molestiae voluptatem, laborum fugiat!
+        </p>
+        <button class="slide-button button" type="button">Подробнее</button>
+        <img class="slide-img" src="/img/slider-item1.png" alt="Нож" />
+      </div>
+      <div class="slide slide__2">
+        <h2 class="slide-heading">slide 2</h2>
+        <p class="slide-caption">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
+          sit nesciunt ex commodi maiores consectetur rerum soluta temporibus
+          reprehenderit corporis dicta qui ducimus suscipit aspernatur earum
+          molestiae voluptatem, laborum fugiat!
+        </p>
+        <button class="slide-button button" type="button">Подробнее</button>
+        <img class="slide-img" src="/img/slider-item1.png" alt="Нож" />
+      </div>
+      <div class="slide slide__3">
+        <h2 class="slide-heading">slide 3</h2>
+        <p class="slide-caption">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
+          sit nesciunt ex commodi maiores consectetur rerum soluta temporibus
+          reprehenderit corporis dicta qui ducimus suscipit aspernatur earum
+          molestiae voluptatem, laborum fugiat!
+        </p>
+        <button class="slide-button button" type="button">Подробнее</button>
+        <img class="slide-img" src="/img/slider-item1.png" alt="Нож" />
+      </div>
+      <div class="slide slide__4">
+        <h2 class="slide-heading">slide 4</h2>
+        <p class="slide-caption">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium
+          sit nesciunt ex commodi maiores consectetur rerum soluta temporibus
+          reprehenderit corporis dicta qui ducimus suscipit aspernatur earum
+          molestiae voluptatem, laborum fugiat!
+        </p>
+        <button class="slide-button button" type="button">Подробнее</button>
+        <img class="slide-img" src="/img/slider-item1.png" alt="Нож" />
+      </div>
     </section>
+    <div class="checkbox__list">
+      <button class="checkbox__list-item checkbox-1">1</button>
+      <button class="checkbox__list-item checkbox-2">2</button>
+      <button class="checkbox__list-item checkbox-3">3</button>
+      <button class="checkbox__list-item checkbox-4">3</button>
+    </div>
     <div class="header__adv">
       <ul class="header__adv-list">
         <li class="header__adv-item">
@@ -114,7 +149,7 @@
         </li>
         <li class="header__adv-item">
           <img src="img/icons/delivery.svg" />
-          <span>Доставка по России, <br />Казахстану и Белоруссии</span>
+          <span>Доставка по России, <br />Казахстану и Беларуси</span>
         </li>
         <li class="header__adv-item">
           <img src="img/icons/order.svg" />

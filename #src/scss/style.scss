@@ -4,6 +4,7 @@
 @import "_aside";
 @import "_keyframes";
 @import "_modal";
+@import "_slider";
 
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
@@ -61,4 +62,9 @@ a {
     transform: scale(99%);
     box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.25);
   }
+}
+
+.error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
