@@ -5,6 +5,8 @@
 @import "_keyframes";
 @import "_modal";
 @import "_slider";
+@import "_slick";
+@import "_slick-theme";
 
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {

@@ -1,22 +1,5 @@
-var burgerButton = document.querySelector(".burger__button");
-var sidebar = document.querySelector(".sidebar");
-var searchButton = document.querySelector(".header__search-button");
-var search = document.querySelector(".header__search");
-var userLink = document.querySelectorAll(".header__navigation-user");
-var modalLogin = document.querySelector(".modal__user");
-var modalForm = document.querySelector(".modal__form");
-var modalClose = document.querySelector(".modal-close");
-var login = modalLogin.querySelector("[name=login]");
-var password = modalLogin.querySelector("[name=password]");
-var slider = document.querySelector(".slider");
-var slide1 = document.querySelector(".slide__1");
-var slide2 = document.querySelector(".slide__2");
-var slide3 = document.querySelector(".slide__3");
-var slide4 = document.querySelector(".slide__4");
-var sliderBtn1 = document.querySelector(".checkbox-1");
-var sliderBtn2 = document.querySelector(".checkbox-2");
-var sliderBtn3 = document.querySelector(".checkbox-3");
-var sliderBtn4 = document.querySelector(".checkbox-4");
+@@include("jquery.min.js")
+@@include("slick.min.js")
 
 function testWebP(callback) {
   var webP = new Image();
@@ -35,11 +18,17 @@ testWebP(function (support) {
   }
 });
 
+var burgerButton = document.querySelector(".burger__button");
+var sidebar = document.querySelector(".sidebar");
+
 burgerButton.addEventListener("click", function (evt) {
   evt.preventDefault();
   burgerButton.classList.toggle("burger__button-close");
   sidebar.classList.toggle("sidebar-show");
 });
+
+var searchButton = document.querySelector(".header__search-button");
+var search = document.querySelector(".header__search");
 
 search.addEventListener("click", function () {
   searchButton.classList.toggle("header__search-show");
@@ -54,16 +43,25 @@ try {
   isStorageSupport = false;
 }
 
-userLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modalLogin.classList.toggle("modal__user-show");
-  login.focus();
-  if (storage) {
-    login.value = storage;
-    password.focus();
-  } else {
+var userLink = document.querySelectorAll(".user__button");
+var modalLogin = document.querySelector(".modal__user");
+var modalForm = document.querySelector(".modal__form");
+var modalClose = document.querySelector(".modal-close");
+var login = modalLogin.querySelector("[name=login]");
+var password = modalLogin.querySelector("[name=password]");
+
+userLink.forEach(function (entry) {
+  entry.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalLogin.classList.toggle("modal__user-show");
     login.focus();
-  }
+    if (storage) {
+      login.value = storage;
+      password.focus();
+    } else {
+      login.focus();
+    }
+  });
 });
 
 modalClose.addEventListener("click", function (evt) {
@@ -96,27 +94,25 @@ modalForm.addEventListener("submit", function (evt) {
   }
 });
 
-sliderBtn1.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slide1.classList.toggle("slide__1-show");
-  if (modalLogin.classList.contains("modal__user-show")) {
-    evt.preventDefault();
-    modalLogin.classList.remove("modal__user-show");
-    modalLogin.classList.remove("error");
-  }
-});
-
-sliderBtn2.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slide2.classList.toggle("slide__2-show");
-});
-
-sliderBtn3.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slide3.classList.toggle("slide__3-show");
-});
-
-sliderBtn4.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slide4.classList.toggle("slide__4-show");
+$('.slider').slick({
+  arrows:true,
+  dots:true,
+  slidesToShow:1,
+  autoplay:true,
+  speed:1000,
+  autoplaySpeed:800,
+  responsive:[
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow:2
+      }
+    },
+    {
+      breakpoint: 550,
+      settings: {
+        slidesToShow:1
+      }
+    }
+  ]
 });
