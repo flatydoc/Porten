@@ -1,5 +1,5 @@
-@@include("jquery.min.js")
-@@include("slick.min.js")
+@@include("_jquery.min.js")
+@@include("_slick.min.js")
 
 function testWebP(callback) {
   var webP = new Image();
@@ -18,8 +18,8 @@ testWebP(function (support) {
   }
 });
 
-var burgerButton = document.querySelector(".burger__button");
-var sidebar = document.querySelector(".sidebar");
+let burgerButton = document.querySelector(".burger__button");
+let sidebar = document.querySelector(".sidebar");
 
 burgerButton.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -27,15 +27,15 @@ burgerButton.addEventListener("click", function (evt) {
   sidebar.classList.toggle("sidebar-show");
 });
 
-var searchButton = document.querySelector(".header__search-button");
-var search = document.querySelector(".header__search");
+let searchButton = document.querySelector(".header__search-button");
+let search = document.querySelector(".header__search");
 
 search.addEventListener("click", function () {
   searchButton.classList.toggle("header__search-show");
 });
 
-var isStorageSupport = true;
-var storage = " ";
+let isStorageSupport = true;
+let storage = " ";
 
 try {
   storage = localStorage.getItem("login");
@@ -43,12 +43,12 @@ try {
   isStorageSupport = false;
 }
 
-var userLink = document.querySelectorAll(".user__button");
-var modalLogin = document.querySelector(".modal__user");
-var modalForm = document.querySelector(".modal__form");
-var modalClose = document.querySelector(".modal-close");
-var login = modalLogin.querySelector("[name=login]");
-var password = modalLogin.querySelector("[name=password]");
+let userLink = document.querySelectorAll(".user__button");
+let modalLogin = document.querySelector(".modal__user");
+let modalForm = document.querySelector(".modal__form");
+let modalClose = document.querySelector(".modal-close");
+let login = modalLogin.querySelector("[name=login]");
+let password = modalLogin.querySelector("[name=password]");
 
 userLink.forEach(function (entry) {
   entry.addEventListener("click", function (evt) {
@@ -95,24 +95,24 @@ modalForm.addEventListener("submit", function (evt) {
 });
 
 $('.slider').slick({
-  arrows:true,
   dots:true,
   slidesToShow:1,
   autoplay:true,
   speed:1000,
   autoplaySpeed:800,
-  responsive:[
-    {
-      breakpoint: 768,
-      settings: {
-        slidesToShow:2
-      }
-    },
-    {
-      breakpoint: 550,
-      settings: {
-        slidesToShow:1
-      }
-    }
-  ]
+});
+
+let passwordLock = document.querySelector(".password__button");
+let passwordInput = document.querySelector(".password-input");
+
+passwordLock.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    passwordLock.classList.add("password__button-show");
+  }
+  else {
+    passwordInput.type = "password"
+    passwordLock.classList.remove("password__button-show");
+  }
 });

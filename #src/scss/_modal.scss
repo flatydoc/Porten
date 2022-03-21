@@ -78,7 +78,7 @@
     }
 
     &-password {
-      background-image: url(/img/icons/lock.svg);
+      position: relative;
     }
 
     &-help {
@@ -245,5 +245,25 @@
     &:active {
       color: rgba(232, 171, 49, 0.8);
     }
+  }
+}
+
+.password__button {
+  position: absolute;
+  top: 50%;
+  right: 3%;
+  width: 25px;
+  height: 25px;
+
+  transform: translateY(-50%);
+
+  background-image: url(../img/icons/eye-lock.svg);
+  background-size: 25px;
+  background-repeat: no-repeat;
+
+  transition: all 0.3s ease 0s;
+
+  &-show {
+    background-image: url(../img/icons/eye.svg);
   }
 }

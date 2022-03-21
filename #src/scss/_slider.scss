@@ -1,1 +1,58 @@
+.slider {
+  &__item {
+    display: flex;
 
+    padding-top: 50px;
+    position: relative;
+
+    &-title {
+      width: 60%;
+      padding-bottom: 25px;
+
+      font-size: 36px;
+
+      @media (max-width: 700px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &-caption {
+      width: 60%;
+      padding: 20px 0;
+
+      font-size: 20px;
+      color: #cacaca;
+
+      @media (max-width: 700px) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &-img {
+      position: absolute;
+      right: 10%;
+      top: 50%;
+
+      width: 150px;
+      height: auto;
+
+      opacity: 0.8;
+
+      transform: translateY(-50%);
+
+      @media (max-width: 700px) {
+        opacity: 0;
+      }
+    }
+
+    &-button {
+      width: 250px;
+      height: 50px;
+      margin: 20px 20px;
+
+      border-radius: 15px;
+    }
+  }
+}

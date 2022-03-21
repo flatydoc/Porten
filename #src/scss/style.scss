@@ -1,12 +1,12 @@
 @import "_normalize";
 
 @import "_header";
-@import "_aside";
+@import "_sidebar";
 @import "_keyframes";
 @import "_modal";
 @import "_slider";
-@import "_slick";
-@import "_slick-theme";
+@import "./Libs/slick";
+@import "./Libs/slick-theme";
 
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
