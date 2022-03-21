@@ -37,25 +37,31 @@
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition: all 0.3s ease 0s;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 10px;
+      height: 10px;
+
+      background-color: transparent;
+      border-radius: 7px;
+
+      transition: all 0.7s ease 0s;
+    }
 
     &:hover,
     &:focus {
       transform: scale(110%);
 
       &::after {
-        content: "";
-
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        width: 10px;
-        height: 10px;
-
         background-color: rgb(232, 170, 49);
-        border-radius: 7px;
       }
     }
 
@@ -67,6 +73,21 @@
 
   & .slick-active button {
     transform: scale(110%);
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 10px;
+      height: 10px;
+
+      background-color: rgb(232, 170, 49);
+      border-radius: 7px;
+    }
   }
 
   @media (max-width: 700px) {

@@ -28,12 +28,16 @@ burgerButton.addEventListener("click", function (evt) {
   sidebar.classList.toggle("sidebar-show");
 });
 
+let searchInput = document.querySelector(".header__search-input");
 let searchButton = document.querySelector(".header__search-button");
-let search = document.querySelector(".header__search");
 
-search.addEventListener("click", function () {
-  searchButton.classList.toggle("header__search-show");
+searchButton.addEventListener("click", function (evt) {
+  if (searchInput.value == "") {
+    evt.preventDefault();
+    searchInput.classList.toggle("header__search-show")
+  }
 });
+
 
 let isStorageSupport = true;
 let storage = " ";
@@ -44,17 +48,18 @@ try {
   isStorageSupport = false;
 }
 
-let userLink = document.querySelectorAll(".user__button");
-let modalLogin = document.querySelector(".modal__user");
+let signIn = document.querySelectorAll(".user__button");
+let modalLogin = document.querySelector(".modal__login");
 let modalForm = document.querySelector(".modal__form");
 let modalClose = document.querySelector(".modal-close");
 let login = modalLogin.querySelector("[name=login]");
 let password = modalLogin.querySelector("[name=password]");
 
-userLink.forEach(function (entry) {
+
+signIn.forEach(function (entry) {
   entry.addEventListener("click", function (evt) {
     evt.preventDefault();
-    modalLogin.classList.toggle("modal__user-show");
+    modalLogin.classList.toggle("modal__login-show");
     login.focus();
     if (storage) {
       login.value = storage;
@@ -65,17 +70,18 @@ userLink.forEach(function (entry) {
   });
 });
 
+
 modalClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  modalLogin.classList.remove("modal__user-show");
+  modalLogin.classList.remove("modal__login-show");
   modalLogin.classList.remove("error");
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (modalLogin.classList.contains("modal__user-show")) {
+    if (modalLogin.classList.contains("modal__login-show")) {
       evt.preventDefault();
-      modalLogin.classList.remove("modal__user-show");
+      modalLogin.classList.remove("modal__login-show");
       modalLogin.classList.remove("error");
     }
   }
@@ -100,7 +106,7 @@ $('.slider').slick({
   slidesToShow:1,
   autoplay:true,
   speed:1000,
-  autoplaySpeed:800,
+  autoplaySpeed:1300,
 });
 
 let passwordLock = document.querySelector(".password__button");

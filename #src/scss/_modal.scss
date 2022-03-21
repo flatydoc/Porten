@@ -14,14 +14,14 @@
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
 
-  &__user {
+  &__login {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
-    width: 320px;
+    width: 560px;
     height: 560px;
-    margin-left: -160px;
+    margin-left: -280px;
     padding: 20px 10px;
 
     font-size: 12px;
@@ -36,6 +36,11 @@
 
     & p {
       margin: 20px 0;
+    }
+
+    @media (max-width: 900px) {
+      width: 320px;
+      margin-left: -160px;
     }
 
     &-show {
@@ -232,19 +237,19 @@
       background-image: url(/img/icons/social/facebook.svg);
     }
   }
+}
 
-  &-link {
-    margin-left: 10px;
-    color: rgb(232, 170, 49);
+.signup-link {
+  margin-left: 10px;
+  color: rgb(232, 170, 49);
 
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 
-    &:active {
-      color: rgba(232, 171, 49, 0.8);
-    }
+  &:active {
+    color: rgba(232, 171, 49, 0.8);
   }
 }
 
