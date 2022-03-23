@@ -728,10 +728,6 @@ li {
   text-decoration: none;
 }
 
-.modal__register {
-  height: 640px;
-}
-
 .modal__register a:first-child {
   font-size: 14px;
   text-decoration: underline;
