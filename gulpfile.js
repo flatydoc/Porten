@@ -17,7 +17,7 @@ let path = {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
     css: source_folder + "/scss/style.scss",
     js: source_folder + "/js/script.js",
-    php: source_folder + "/php/index.php",
+    php: source_folder + "/php/*.php",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/*.ttf",
   },
@@ -114,6 +114,7 @@ function js() {
 
 function php() {
   return src(path.src.php)
+    .pipe(include())
     .pipe(dest(path.build.php))
     .pipe(browsersync.stream());
 }

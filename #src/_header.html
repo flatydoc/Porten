@@ -62,7 +62,7 @@
     </a>
     <form
       class="header__search"
-      action="php/index.php"
+      action="#"
       method="POST"
       enctype="multipart/form-data"
     >
@@ -155,7 +155,7 @@
   <section class="modal__login modal">
     <h2>Hello</h2>
     <p>Sign in to continue</p>
-    <form class="modal__form" method="POST" action="php/index.php">
+    <form class="modal__form" method="POST" action="php/aut.php">
       <label class="visually-hidden" for="user-login">Логин</label>
       <input
         class="modal__form-login"
@@ -202,7 +202,7 @@
   <section class="modal__register modal">
     <h2>Welcome</h2>
     <p>Create an account</p>
-    <form class="modal__form" method="POST" action="php/index.php">
+    <form class="modal__form" method="POST" action="php/reg.php">
       <label class="visually-hidden" for="user-name">Ваше имя</label>
       <input
         class="modal__form-name"
@@ -211,21 +211,13 @@
         type="text"
         placeholder="Your name"
       />
-      <label class="visually-hidden" for="user-email">Электронная почта</label>
+      <label class="visually-hidden" for="user-login">Придумайте Логин</label>
       <input
-        class="modal__form-email"
-        id="user-email"
-        name="email"
-        type="email"
-        placeholder="Email"
-      />
-      <label class="visually-hidden" for="user-phone">Телефон</label>
-      <input
-        class="modal__form-phone"
-        id="user-phone"
-        name="phone"
-        type="tel"
-        placeholder="Phone number"
+        class="modal__form-login"
+        id="user-login"
+        name="login"
+        type="text"
+        placeholder="Create Login"
       />
       <label class="visually-hidden" for="user-password">Создайте пароль</label>
       <input
